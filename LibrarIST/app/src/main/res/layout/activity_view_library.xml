@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewLibraryActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:paddingTop="30dp"
+        android:layout_marginBottom="500dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp">
+
+        <ImageView
+            android:id="@+id/libraryimage"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:background="#03A9F4"
+            android:contentDescription="@string/library_image"
+            android:scaleType="fitCenter"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="50dp">
+            <CheckBox
+                android:id="@+id/favoritecheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/favorite" />
+
+            <ImageButton
+                android:id="@+id/navigatebutton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                android:contentDescription="@string/navigate"
+                app:srcCompat="@drawable/diamond_turn_right" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="350dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mapfragment"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="380dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/booklist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="620dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <Button
+            android:id="@+id/donatedbookbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/donate_book"
+            android:layout_marginStart="40dp"
+            />
+
+        <Button
+            android:id="@+id/retrievebookbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/retrieve_book"
+            android:layout_marginStart="40dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

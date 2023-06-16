@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.fragment.app.FragmentContainerView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="300dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginBottom="90dp"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/centermapbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/center_map" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/navigationbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon="@drawable/diamond_turn_right"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:background="@color/pinkBackground">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/favoritesbtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/favorites"
+            app:backgroundTint="#E178E4"
+            app:icon="@drawable/diamond_turn_right" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/allbooksbtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/all_books"
+            app:backgroundTint="#E178E4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addlibrarybtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/add_library"
+            app:backgroundTint="#E178E4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="580dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <SearchView
+            android:id="@+id/searchplace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="#B9FA5ED8" />
+    </LinearLayout>
+
+</RelativeLayout>

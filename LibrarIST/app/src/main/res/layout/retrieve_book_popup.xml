@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#62def8">
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/retrievebookbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retrieve_book"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="20dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bookbarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/barcode"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </FrameLayout>
+
+</RelativeLayout>

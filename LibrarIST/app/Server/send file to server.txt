@@ -1,0 +1,1 @@
+scp C:/Users/acvcl/Desktop/Tecnico/Mestrado/CMU/LibrarIST\ Server/LibrarIST/app/Server/server.py ubuntu@192.92.147.100:/home/ubuntu
